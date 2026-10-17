@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.slider_a{
+
+    position: relative;
+
+    background-color: black;
+
+    width: 350px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+.slider_a input{
+    z-index: 2;
+}
+
+.slider_a_wrapper{
+z-index:1;
+
+    width: 300%;
+    height: 100%;
+
+    position: absolute;
+    display: flex;
+
+    transition: all 1s ease-in-out;
+}
+
+.slider_a_element{
+width: calc(100% / 3);
+height: 100%;
+}
+
+.element_one{
+    background-color: blue;
+}
+
+.element_two{
+    background-color: blanchedalmond;
+}
+
+.element_three{
+    background-color: goldenrod;
+}
+
+.slider_a input[value="one"]:checked~.slider_a_wrapper{
+    transform: translateX(calc(100% / 3))
+}
+
+.slider_a input[value="two"]:checked~.slider_a_wrapper{
+    transform: translateX(0)
+}
+
+.slider_a input[value="three"]:checked~.slider_a_wrapper{
+    transform: translateX(calc(-100% / 3))
+}
+
