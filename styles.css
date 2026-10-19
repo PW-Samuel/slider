@@ -4,7 +4,7 @@
 }
 
 body {
-background-color: rgba(0, 0, 0, 0.113);
+    background-color: rgba(0, 0, 0, 0.113);
 
     display: flex;
     flex-direction: column;
@@ -51,6 +51,7 @@ background-color: rgba(0, 0, 0, 0.113);
 .slider_a_element {
     width: calc(100% / 3);
     height: 100%;
+
 }
 
 .element_one {
@@ -81,7 +82,7 @@ background-color: rgba(0, 0, 0, 0.113);
     height: 300px;
 
     display: flex;
-    
+
 }
 
 .slider_b_element {
@@ -97,31 +98,64 @@ background-color: rgba(0, 0, 0, 0.113);
 
 
 
-    transform: perspective(250px) rotateY(20deg) translateX(-20px) ;
+    transform: perspective(250px) rotateY(20deg) translateX(-20px);
     transform-origin: 50% 50%;
 
     transition: all 250ms ease-in-out;
 
 }
 
-.slider_b_element:hover{
+.slider_b_element:hover {
     z-index: 2;
 
     background-color: gainsboro;
     transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
 }
 
-.slider_b_element:hover~.slider_b_element{
-    background-color:rgba(0, 0, 0, 0.57);
+.slider_b_element:hover~.slider_b_element {
+    background-color: rgba(0, 0, 0, 0.57);
 
-     transform: perspective(250px) rotateY(-20deg) translateX(20px) ;
-   
+    transform: perspective(250px) rotateY(-20deg) translateX(20px);
+
 
 }
 
-img{
+img {
 
     width: 150px;
     height: auto;
-   
+
+}
+
+.animation_box {
+    margin-top: 50px;
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+
+    animation: mangofy 2s ease-in-out forwards;
+
+}
+
+@keyframes mangofy {
+
+    0% {
+        transform: translateY(0px) rotate(45deg) scaleX(1) scaleY(1);
+    }
+
+    25% {
+        transform: translateY(-50px) rotate(45deg) scaleX(1) scaleY(1);
+    }
+
+    75% {
+        transform: translateY(-50px) rotate(0deg) scaleX(1) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(-50px) rotate(0deg) scaleX(1.5) scaleY(1.5);
+    }
+
 }
