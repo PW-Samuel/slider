@@ -159,3 +159,20 @@ img {
     }
 
 }
+
+
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: chocolate;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: deeppink;
+}
